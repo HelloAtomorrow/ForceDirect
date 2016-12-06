@@ -2,44 +2,54 @@
 #include <iostream>
 using namespace std;
 
-DataManager::DataManager()
+CDataManager::CDataManager():m_NodeData(2063)
 {
 
 }
 
-DataManager::~DataManager()
+CDataManager::~CDataManager()
 {
 
 }
 
-bool DataManager::SetNodeData(SNode node, int num)
+bool CDataManager::SetNodeData(SNode node, int location)
 {
-	if (num >= m_NodeData.size())
+	if (location >= m_NodeData.size())
 	{
 		cout << "vector over size!" << endl;
 		return false;
 	}
-	m_NodeData[num] = node;
+	m_NodeData[location] = node;
 	return true;
 }
 
-bool DataManager::SetNodeData(SNode node)
-{
-	m_NodeData.push_back(node);
-	return true;
-}
+//vector<SNode>::iterator CDataManager::SetNodeData(SNode node)
+//{
+//	vector<SNode>::iterator location;
+//	for (location = m_NodeData.begin(); location != m_NodeData.end(); ++location)
+//	{
+//		if (node.nodeName == location->nodeName)
+//		{
+//			return location;
+//		}		
+//	}
+//	//m_NodeData.insert(location, node);
+//	m_NodeData.push_back(node);
+//	location = m_NodeData.begin();
+//	return location;
+//}
 
-bool DataManager::SetEdgeData(SEdge edge)
+bool CDataManager::SetEdgeData(SEdge edge)
 {
 	m_EdgeData.push_back(edge);
 	return true;
 }
 
-const vector<SNode> &DataManager::GetNodeData()
+const vector<SNode> &CDataManager::GetNodeData()
 {
 	return m_NodeData;
 }
-const vector<SEdge> &DataManager::GetEdgeData()
+const vector<SEdge> &CDataManager::GetEdgeData()
 {
 	return m_EdgeData;
 }
