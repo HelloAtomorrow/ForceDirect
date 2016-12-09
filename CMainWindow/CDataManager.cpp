@@ -2,7 +2,9 @@
 #include <iostream>
 using namespace std;
 
-CDataManager::CDataManager():m_NodeData(2063)
+vector<SNode> CDataManager::m_NodeData(2063);
+vector<SEdge> CDataManager::m_EdgeData;
+CDataManager::CDataManager()//:m_NodeData(2063)
 {
 
 }

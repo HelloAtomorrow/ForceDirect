@@ -16,15 +16,9 @@ class CFileOperation
 public:
 	CFileOperation();
 	~CFileOperation();
-	bool ReadFile(string fileName, CDataManager &dataManager);
+	static bool ReadFile(string fileName, CDataManager &dataManager);
 
 private:
 
 };
-
-
-
-
-
-
 #endif //CFILEOPERATION_H
