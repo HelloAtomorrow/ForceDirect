@@ -138,7 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CDataManager.cpp" />
-    <ClCompile Include="CDataPreprocess.cpp" />
+    <ClCompile Include="CFileOperation.cpp" />
     <ClCompile Include="CForceGuidanceAlgorithm.cpp" />
     <ClCompile Include="cmainwindow.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_cmainwindow.cpp">
@@ -203,7 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CDataManager.h" />
-    <ClInclude Include="CDataPreprocess.h" />
+    <ClInclude Include="CFileOperation.h" />
     <ClInclude Include="CForceGuidanceAlgorithm.h" />
     <ClInclude Include="GeneratedFiles\ui_cmainwindow.h" />
     <ClInclude Include="SDataStructure.h" />
